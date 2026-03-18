@@ -1,0 +1,22 @@
+1)
+	a) git init: Inicializa um novo repositório Git local em um projeto.
+	b) git config --global user.name "turing": Define globalmente o nome do usuário que enviará os commits.
+	c) git add EXERCICIO.txt: Adiciona um arquivo específico, chamado "EXERCICIO.txt", preparando ele para o próximo commit.
+	d) git add .: Adiciona todas as modificações do diretório atual preparando para o proximo commit.
+	e) git commit -m "Adicionado nova interface": Realiza/envia o commit com uma mensagem descritiva
+	f) git commit: Envia um commit.
+	g) git reset --hard HEAD: Redefine o estado do diretório de trabalho e da área de preparação para o estado do último commit, descartando todas as alterações locais não salvas.
+	h) cd Downloads: Comando para alterar o diretório atual para a pasta "Downloads".
+	i) pwd: Comando de terminal que exibe o caminho completo do diretório atual.
+	j) cd ..: Comando de terminal para subir um nível do diretório (sair da pasta/voltar para a raiz dela).
+	k) ls: Comando de terminal utilizado para listar os arquivos e pastas presentes no diretório atual.
+	l) git pull: Busca as alterações de um repositório remoto e as mescla automaticamente ao branch local atual.
+	m) git push: Envia os commits realizados no repositório local para um repositório remoto.
+	n) git clone https://gitlab.com/rVenson/linguagemdeprogramacao: Cria uma cópia local de um repositório remoto hospedado na URL especificada.
+	o) git diff: Mostra as diferenças entre as alterações realizadas nos arquivos que ainda não foram adicionados/preparados para o proximo commit.
+	p) git show: Exibe informações detalhadas, como detalhes de um commit específico.
+
+
+	1) Stage Area, Commit
+	2) Local Repository
+	3) Remote Repository
