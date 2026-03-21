@@ -17,6 +17,6 @@
 	p) git show: Exibe informações detalhadas, como detalhes de um commit específico.
 
 
-	1) Stage Area, Commit
-	2) Local Repository
-	3) Remote Repository
+	1) Stage Area, Commit: Stage Area é onde os Commits (envios) são preparados
+	2) Local Repository: uma cópia armazenada no computador, e não na núvem, do repositório, usado para desenvolvimento offline
+	3) Remote Repository: uma versão online do repositório, descentralizada do computador dos desenvolvedores
