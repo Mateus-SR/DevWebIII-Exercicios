@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/index.js"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen font-sans text-gray-800 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+        <header class="text-center py-6">
+            <h1 class="text-4xl font-bold text-blue-600 flex items-center justify-center gap-3">
+                <i data-lucide="calendar-clock"></i> Agenda
+            </h1>
+        </header>
+
+        <div id="messageBox" class="hidden rounded-lg p-4 font-medium text-center shadow-sm transition-all duration-300"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-1 bg-white p-6 rounded-xl shadow-md h-fit border border-gray-100">
+                <h2 id="formTitle" class="text-xl font-semibold mb-4 text-gray-700">Novo Evento</h2>
+                
+                <form id="eventoForm" class="space-y-4">
+                    <input type="hidden" id="eventoId">
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Título</label>
+                        <input type="text" id="titulo" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" placeholder="Ex: Reunião de Pauta">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-1">Data</label>
+                            <input type="date" id="data" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-600 mb-1">Hora</label>
+                            <input type="time" id="hora" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Descrição</label>
+                        <textarea id="descricao" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-colors resize-none" placeholder="Detalhes adicionais..."></textarea>
+                    </div>
+                    
+                    <div class="pt-2 flex gap-2">
+                        <button type="submit" id="btnSalvar" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex justify-center items-center gap-2">
+                            <i data-lucide="save" class="w-4 h-4"></i> Salvar
+                        </button>
+                        <button type="button" id="btnCancelar" class="hidden flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="md:col-span-2">
+                <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
+                    <div class="p-4 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h2 class="text-lg font-semibold text-gray-700">Itens marcados na agenda</h2>
+                        <span id="contadorEventos" class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded-full">0</span>
+                    </div>
+                    
+                    <div id="listaEventos" class="divide-y divide-gray-100 max-h-[600px] overflow-y-auto">
+                        <div class="p-8 text-center text-gray-500">
+                            <i data-lucide="loader-2" class="w-8 h-8 animate-spin mx-auto mb-2 text-blue-500"></i>
+                            Carregando agenda...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
